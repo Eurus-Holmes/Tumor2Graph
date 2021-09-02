@@ -53,3 +53,7 @@ df_all = df_all.filter(regex="(?<!mirna)$")
 # Without RPPA:
 df_all = df_all.filter(regex="(?<!rppa)$")
 ```
+
+Without pathology images, just use `VGCN.py` to replace `Tumor2Graph.py`.
+
+> VGCN means Virtual Graph Convolutional Networks, check [here](https://github.com/Eurus-Holmes/VGCN) for more information.

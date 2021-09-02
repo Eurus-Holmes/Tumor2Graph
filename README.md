@@ -57,3 +57,8 @@ df_all = df_all.filter(regex="(?<!rppa)$")
 Without pathology images, just use `VGCN.py` to replace `Tumor2Graph.py`.
 
 > VGCN means Virtual Graph Convolutional Networks, check [here](https://github.com/Eurus-Holmes/VGCN) for more information.
+
+
+### Identifying Tumor2Graph's tumor sub-typing in OS and PFS
+
+Run `os.sh` and `pfs.sh`.

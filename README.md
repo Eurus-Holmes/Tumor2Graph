@@ -40,10 +40,11 @@ srun -p MIA -n1 -w SH-IDC1-10-5-30-201 --gres=gpu:2 --mpi=pmi2 python -u vgcn_tr
 
 
 
-
+```
 df_all = df_all.filter(regex="(?<!snv)$")
 df_all = df_all.filter(regex="(?<!_rna)$")
 df_all = df_all.filter(regex="(?<!methy)$")
 df_all = df_all.filter(regex="(?<!cnv)$")
 df_all = df_all.filter(regex="(?<!mirna)$")
 df_all = df_all.filter(regex="(?<!rppa)$")
+```

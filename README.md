@@ -49,12 +49,3 @@ df_all = df_all.filter(regex="(?<!mirna)$")
 # Without RPPA:
 df_all = df_all.filter(regex="(?<!rppa)$")
 ```
-
-
-### Identifying Tumor2Graph's tumor sub-typing in OS and PFS
-
-```
-1. Run the `whole_graph_evaluate` function in `Tumor2Graph.py` to get `embedding.npy`
-2. Run the `embedding.py` to get `dna_rna_methy_cluster_result.csv`
-3. Run the `life_cancer.py` or `life_cancer_pfs.py` to get `cluster_result.pdf`
-```

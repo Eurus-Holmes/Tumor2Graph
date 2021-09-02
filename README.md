@@ -12,7 +12,9 @@ All the data should be saved into folder `dataset` in the repo root folder.
 
 ## Installation
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 
 `srun -p MIA -n1 -w SH-IDC1-10-5-30-204 --gres=gpu:2 --mpi=pmi2 python -u vgcn_trainer_cnn_new.py >> new_res_new.log 2>&1 &`

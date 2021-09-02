@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from lifelines.datasets import load_waltons
 from lifelines import KaplanMeierFitter
 from lifelines.utils import median_survival_times
@@ -16,8 +14,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 #sys.exit()
 
 #%%
-cluster_result = pd.read_csv("/home/user/zyw_document/st_zyw/cancer_classifier/data/dna_rna_methy_cluster_result.csv")
-data = pd.read_csv(r"/home/user/TCGA_DNA_methylation/Survival_SupplementalTable_S1_20171025_xena_sp",sep="\t")
+cluster_result = pd.read_csv("output/dna_rna_methy_cluster_result.csv")
+data = pd.read_csv(r"dataset/Survival_SupplementalTable_S1_20171025_xena_sp",sep="\t")
 #cluster_result["sample"] = cluster_result["sample_id"].apply(lambda x:x[:15])
 df = pd.merge(cluster_result,data[["sample","PFI.time","PFI"]],how="inner",left_on="sample_id",right_on="sample")
 df = df.loc[df["PFI.time"].dropna().index]
@@ -38,8 +36,8 @@ for cluster_col in ["hierachical_separate_clstr","hierachical_separate_clstr_2",
 #plt.close()
     fig = plt.figure(figsize=(30, 40), dpi=100)
     fig.clf()
-    plt.tight_layout(pad=0.01, h_pad=0.01, w_pad=0.01,)#调整整体空白
-    plt.subplots_adjust(wspace =0.5, hspace =0.7)#调整子图间距
+    plt.tight_layout(pad=0.01, h_pad=0.01, w_pad=0.01,)
+    plt.subplots_adjust(wspace =0.5, hspace =0.7)
     n = 1
     
     

@@ -7,8 +7,8 @@ import math
 from matplotlib import pyplot as plt
 from sklearn import metrics
 from torch.utils.data import DataLoader
-from dataset.torch_dataset_v2 import TorchDataset
-from dataset.tumor_dataset_v2 import TumorDataset
+from dataset.torch_dataset import TorchDataset
+from dataset.tumor_dataset import TumorDataset
 from metrics.evaluate_cls import evaluate_multi_cls
 from models.gcn_conv import GCNConv
 import os.path as osp

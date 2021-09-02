@@ -92,8 +92,9 @@ class Simple_Protein_Predict(nn.Module):
         predictions = predictions.squeeze()
         compute_loss = nn.BCELoss()
         if label is not None:
-            # 计算loss
             loss = compute_loss(predictions, label)
             return loss, predictions
         else:
             return predictions
+
+        

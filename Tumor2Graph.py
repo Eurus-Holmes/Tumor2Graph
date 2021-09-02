@@ -433,4 +433,3 @@ if __name__ == '__main__':
         trainer = Trainer(**param_dict)
         trainer.start()
         # trainer.whole_graph_evaluate()
-

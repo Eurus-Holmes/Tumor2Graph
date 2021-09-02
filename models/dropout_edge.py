@@ -24,3 +24,5 @@ if __name__ == '__main__':
     adj = torch.ones(10)
     dropedge = DropEdge(p=0.5)
     print(dropedge(adj))
+
+    

@@ -28,13 +28,24 @@ srun -p MIA -n1 -w SH-IDC1-10-5-30-204 --gres=gpu:2 --mpi=pmi2 python -u Tumor2G
 
 ### Ablation Study
 
-Just 
+Just add a line of code to the `tumor_dataset.py` to get the result of the corresponding ablation study. Such as:
 
 ```
+Without SNV:
 df_all = df_all.filter(regex="(?<!snv)$")
+
+Without RNA:
 df_all = df_all.filter(regex="(?<!_rna)$")
+
+Without Methylation:
 df_all = df_all.filter(regex="(?<!methy)$")
+
+Without CNV:
 df_all = df_all.filter(regex="(?<!cnv)$")
+
+Without miRNA:
 df_all = df_all.filter(regex="(?<!mirna)$")
+
+Without RPPA:
 df_all = df_all.filter(regex="(?<!rppa)$")
 ```

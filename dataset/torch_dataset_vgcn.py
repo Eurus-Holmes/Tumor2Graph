@@ -1,13 +1,3 @@
-#!/usr/bin/env
-# coding:utf-8
-
-"""
-Created on 2020/12/7 下午7:38
-
-base Info
-"""
-__author__ = 'xx'
-__version__ = '1.0'
 import torch
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
@@ -17,7 +7,6 @@ class TorchDataset(Dataset):
     def __init__(self, dataset, split_type):
         self.dataset = dataset
         self.split_type = split_type
-#        self.folder_path ="/home/user/zyw_document/st_zyw/DNA/image_deconvolved"
         assert split_type in ['train', 'valid', 'test_is_primary', 'test_is_transfer']
         if self.split_type == 'train':
             self.select_idx = self.dataset.train_index

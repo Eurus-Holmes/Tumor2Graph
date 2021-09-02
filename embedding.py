@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug 14 14:21:55 2020
-"""
-# embedding cluster
-
-# setting
-
-# wd = "/home/jarly/Desktop/实验_癌症分型/exp/20.08.13_adj"  # company-pc
-# wd = "/Users/zhangjie1/OneDrive - sensetime/st/实验/实验_癌症分型/exp/20.08.13_adj"  # mac
-show_rows = 30
-cover_flg = True
-
 import os
 # os.chdir(wd)
 import warnings
@@ -20,6 +6,8 @@ warnings.filterwarnings("ignore")
 
 # from IPython.core.interactiveshell import InteractiveShell
 # InteractiveShell.ast_node_interactivity = "all"
+show_rows = 30
+cover_flg = True
 
 
 import numpy as np
@@ -47,8 +35,8 @@ def noCoverWrite(df, file, f=True):
 
 
 # %% load data
-# file_path = "save_embedding/vgcn_trainer_cnn_new_seed=3_batch=1024_embedding.npy"
-file_path = "save_embedding_new_new2/vgcn_trainer_v2_seed=5_batch=1024_train_embedding.npy"
+# file_path = "save_embedding/VGCN_seed=3_batch=1024_embedding.npy"
+file_path = "save_embedding/Tumor2Graph_seed=5_batch=1024_embedding.npy"
 df_y_ori = np.load(file_path)
 # print(df_y_ori)
 print(df_y_ori.shape)
@@ -59,7 +47,6 @@ df_emb_ori = pd.DataFrame(
 )
 # df_y_ori = df_y_ori[:6180] ##use train data
 ## load train data
-# train_data = pd.read_csv("/home/user/zyw_document/st_zyw/DNA/data/dna_rna_methy_train.csv")
 df_all = pd.read_csv("dataset/v10/df_all_new2.csv")
 # print(list(train_df.columns))
 # print(list(extra_test_df.columns))
@@ -174,5 +161,4 @@ dataframe.to_csv("cancer2.csv", index=False, sep=',')
 
 # assert(df_y['hierachical_separate_clstr'].isnull().sum()==0)
 
-noCoverWrite(df_y, 'output/dna_rna_methy_cluster_result_new_new.csv')
-sys.exit()
+noCoverWrite(df_y, 'output/dna_rna_methy_cluster_result.csv')

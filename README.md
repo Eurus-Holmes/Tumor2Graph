@@ -26,9 +26,9 @@ srun -p MIA -n1 -w SH-IDC1-10-5-30-204 --gres=gpu:2 --mpi=pmi2 python -u Tumor2G
 ```
 
 
+### Ablation Study
 
-
-
+Just 
 
 ```
 df_all = df_all.filter(regex="(?<!snv)$")

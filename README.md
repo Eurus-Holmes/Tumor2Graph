@@ -17,7 +17,13 @@ pip install -r requirements.txt
 ```
 
 
-`srun -p MIA -n1 -w SH-IDC1-10-5-30-204 --gres=gpu:2 --mpi=pmi2 python -u vgcn_trainer_cnn_new.py >> new_res_new.log 2>&1 &`
+## Usage
+
+Run the following code on the computing cluster to predict the results of tumor typing and subtyping.
+
+```
+srun -p MIA -n1 -w SH-IDC1-10-5-30-204 --gres=gpu:2 --mpi=pmi2 python -u Tumor2Graph.py >> res.log 2>&1 &
+```
 
 
 

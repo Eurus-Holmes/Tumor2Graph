@@ -18,4 +18,4 @@ a = df2.iloc[:, 1:]
 df2['best_cluster'] = a.min(axis=1)
 print(df2)
 
-df2.to_csv("new/PFS_complete_new_new.csv",index=False,sep=',')
+df2.to_csv("new/PFS_complete.csv",index=False,sep=',')

@@ -49,3 +49,7 @@ df_all = df_all.filter(regex="(?<!mirna)$")
 # Without RPPA:
 df_all = df_all.filter(regex="(?<!rppa)$")
 ```
+
+
+### Identifying Tumor2Graph's tumor sub-typing in OS and PFS
+

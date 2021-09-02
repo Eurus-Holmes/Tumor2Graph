@@ -157,7 +157,7 @@ print(df_y['hierachical_separate_clstr'])
 print(df_y['hierachical_separate_clstr'].isnull().sum())
 
 dataframe = pd.DataFrame({'Cohort': Cohort, 'numbers': nums})
-dataframe.to_csv("cancer2.csv", index=False, sep=',')
+dataframe.to_csv("cancer.csv", index=False, sep=',')
 
 # assert(df_y['hierachical_separate_clstr'].isnull().sum()==0)
 

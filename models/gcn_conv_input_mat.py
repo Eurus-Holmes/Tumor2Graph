@@ -1,13 +1,3 @@
-#!/usr/bin/env
-# coding:utf-8
-"""
-Created on 2019/7/23 15:33
-
-base Info
-"""
-__author__ = 'xx'
-__version__ = '1.0'
-
 import torch.nn.functional as F
 
 import torch

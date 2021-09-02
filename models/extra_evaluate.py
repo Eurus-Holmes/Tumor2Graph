@@ -1,13 +1,3 @@
-#!/usr/bin/env
-# coding:utf-8
-
-"""
-Created on 2020/12/7 上午11:38
-
-base Info
-"""
-__author__ = 'xx'
-__version__ = '1.0'
 from dataset.abs_dataset_cls_v2 import AbsDataset
 from dataset.abs_dataset_pdb import PDBDataset
 import numpy as np
